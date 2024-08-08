@@ -1,0 +1,10 @@
+# ProContact
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**phone** | **string** | phone number | [optional] 
+**mobile** | **string** | mobile phone | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+

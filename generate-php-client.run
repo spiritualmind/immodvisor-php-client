@@ -1,0 +1,2 @@
+#!/bin/zsh
+swagger-codegen generate -i openapi.json -c generate-config.json -l php -o .

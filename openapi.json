@@ -1256,9 +1256,7 @@
                                             "default": null
                                         },
                                         "datas": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "object",
+                                            "type": "object",
                                                 "properties": {
                                                     "company": {
                                                         "type": "object",
@@ -1287,8 +1285,7 @@
                                                             "$ref": "#/components/schemas/review"
                                                         }
                                                     }
-                                                }
-                                            },
+                                                },
                                             "nullable": true
                                         },
                                         "checksum": {

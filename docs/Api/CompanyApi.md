@@ -676,7 +676,7 @@ Name | Type | Description  | Notes
  **checksum** | **string**| Request&#x27;s validity checksum |
  **aPIVERSION** | **string**| API&#x27;s Used version. |
  **nbrReviews** | **int**| Last notices&#x27; number to return per company.  By default 0, maximum 5. To retrieve previous notices, see the reviewList() service. This parameter adds an array of reviews objects to the return. | [optional]
- **enable** | **bool**| if true returns only active companies, if false returns all companies. True by default. | [optional] [default to true]
+ **enable** | **bool**| if true returns only active companies, if false returns all companies. True by default. | [optional]
 
 ### Return type
 

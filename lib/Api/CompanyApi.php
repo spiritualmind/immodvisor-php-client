@@ -3150,13 +3150,13 @@ class CompanyApi
      * @param  string $checksum Request&#x27;s validity checksum (required)
      * @param  string $aPIVERSION API&#x27;s Used version. (required)
      * @param  int $nbrReviews Last notices&#x27; number to return per company.  By default 0, maximum 5. To retrieve previous notices, see the reviewList() service. This parameter adds an array of reviews objects to the return. (optional)
-     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional, default to true)
+     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional)
      *
      * @throws \Immodvisor\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Immodvisor\Model\InlineResponse2001
      */
-    public function companyListGet($checksum, $aPIVERSION, $nbrReviews = null, $enable = 'true')
+    public function companyListGet($checksum, $aPIVERSION, $nbrReviews = null, $enable = null)
     {
         list($response) = $this->companyListGetWithHttpInfo($checksum, $aPIVERSION, $nbrReviews, $enable);
         return $response;
@@ -3170,13 +3170,13 @@ class CompanyApi
      * @param  string $checksum Request&#x27;s validity checksum (required)
      * @param  string $aPIVERSION API&#x27;s Used version. (required)
      * @param  int $nbrReviews Last notices&#x27; number to return per company.  By default 0, maximum 5. To retrieve previous notices, see the reviewList() service. This parameter adds an array of reviews objects to the return. (optional)
-     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional, default to true)
+     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional)
      *
      * @throws \Immodvisor\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Immodvisor\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function companyListGetWithHttpInfo($checksum, $aPIVERSION, $nbrReviews = null, $enable = 'true')
+    public function companyListGetWithHttpInfo($checksum, $aPIVERSION, $nbrReviews = null, $enable = null)
     {
         $returnType = '\Immodvisor\Model\InlineResponse2001';
         $request = $this->companyListGetRequest($checksum, $aPIVERSION, $nbrReviews, $enable);
@@ -3256,12 +3256,12 @@ class CompanyApi
      * @param  string $checksum Request&#x27;s validity checksum (required)
      * @param  string $aPIVERSION API&#x27;s Used version. (required)
      * @param  int $nbrReviews Last notices&#x27; number to return per company.  By default 0, maximum 5. To retrieve previous notices, see the reviewList() service. This parameter adds an array of reviews objects to the return. (optional)
-     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional, default to true)
+     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function companyListGetAsync($checksum, $aPIVERSION, $nbrReviews = null, $enable = 'true')
+    public function companyListGetAsync($checksum, $aPIVERSION, $nbrReviews = null, $enable = null)
     {
         return $this->companyListGetAsyncWithHttpInfo($checksum, $aPIVERSION, $nbrReviews, $enable)
             ->then(
@@ -3279,12 +3279,12 @@ class CompanyApi
      * @param  string $checksum Request&#x27;s validity checksum (required)
      * @param  string $aPIVERSION API&#x27;s Used version. (required)
      * @param  int $nbrReviews Last notices&#x27; number to return per company.  By default 0, maximum 5. To retrieve previous notices, see the reviewList() service. This parameter adds an array of reviews objects to the return. (optional)
-     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional, default to true)
+     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function companyListGetAsyncWithHttpInfo($checksum, $aPIVERSION, $nbrReviews = null, $enable = 'true')
+    public function companyListGetAsyncWithHttpInfo($checksum, $aPIVERSION, $nbrReviews = null, $enable = null)
     {
         $returnType = '\Immodvisor\Model\InlineResponse2001';
         $request = $this->companyListGetRequest($checksum, $aPIVERSION, $nbrReviews, $enable);
@@ -3332,12 +3332,12 @@ class CompanyApi
      * @param  string $checksum Request&#x27;s validity checksum (required)
      * @param  string $aPIVERSION API&#x27;s Used version. (required)
      * @param  int $nbrReviews Last notices&#x27; number to return per company.  By default 0, maximum 5. To retrieve previous notices, see the reviewList() service. This parameter adds an array of reviews objects to the return. (optional)
-     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional, default to true)
+     * @param  bool $enable if true returns only active companies, if false returns all companies. True by default. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function companyListGetRequest($checksum, $aPIVERSION, $nbrReviews = null, $enable = 'true')
+    protected function companyListGetRequest($checksum, $aPIVERSION, $nbrReviews = null, $enable = null)
     {
         // verify the required parameter 'checksum' is set
         if ($checksum === null || (is_array($checksum) && count($checksum) === 0)) {

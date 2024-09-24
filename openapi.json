@@ -1216,7 +1216,6 @@
                         "required": false,
                         "schema": {
                             "type": "boolean",
-                            "default": true
                         },
                         "description": "if true returns only active companies, if false returns all companies. True by default."
                     },
